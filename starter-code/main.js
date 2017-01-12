@@ -1,8 +1,14 @@
 var cards = ["queen","queen","king","king"];
 var cardsInPlay=[];
-var matchCount = 0;
+var count = 0;
+var score = 0;
 
 var gameBoard = document.getElementById('game-board');
+
+function timedRefresh(timeoutPeriod) {
+    setTimeout("location.reload(true);",timeoutPeriod);
+}
+
 
 function createBoard(){
   
@@ -19,14 +25,15 @@ function createBoard(){
 
 function isMatch(cardsToMatch){
     if(cardsToMatch[0]===cardsToMatch[1]){
-        alert("You found a match!"); 
-        matchCount++; 
-        window.location.reload(false);
+    	alert("You found a match!");
+        timedRefresh(500);
+        count++; 
+        score++;
     }
     else{
         alert("Sorry, try again!");
-        window.location.reload(false);
-        matchCount++; 
+        timedRefresh(500);
+        count++; 
     }
 }
 
@@ -45,4 +52,7 @@ function isTwoCards(){
         cardsInPlay=[];
     }
 }
+
+
+
 createBoard();
