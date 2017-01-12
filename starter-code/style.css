@@ -4,6 +4,14 @@
 	width: 50%;
 }
 
+input {
+	font-size: 1em;
+	background-color: transparent;
+	text-align: center;
+	border-width: 0;
+	color: #fff;
+}
+
 .card{
 	height: 200px;
 	width: 150px;
@@ -13,7 +21,7 @@
     background-repeat: no-repeat;
 	border-radius: 20px;
 	float:left;
-	margin:10%;
+	margin:1% 1% 1% 5%;
 }
 
 .card:hover {
