@@ -1,7 +1,40 @@
+#jake
+{
+    position: absolute; 
+    left: 0px;
+    height:100%;
+    width: 26%;
+    margin: 11px;
+  text-align: center;
+}
+
+.behind {
+  color:black;
+  font-size:32px;
+  z-index:-1
+  margin:0;
+  position: absolute;
+  padding-left:27px;
+  padding-top:80px;
+}
+
+.gallery-item .thumbnail {
+  border: 5px solid #fff;
+  height:250px;
+  width:250px;
+  border-radius:160px;
+  position:relative;
+}
+
+.thumbnail:hover { 
+    opacity:0.5;
+}
+
 .board{
     display:inline-block;
 	height:50%;
 	width: 50%;
+	margin-left: 25%;
 }
 
 input {
@@ -21,7 +54,7 @@ input {
     background-repeat: no-repeat;
 	border-radius: 20px;
 	float:left;
-	margin:1% 1% 1% 5%;
+	margin:1% 1% 1% 6%;
 }
 
 .card:hover {
@@ -95,7 +128,15 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(213, 219, 219);
+    background:linear-gradient(to bottom right, rgb(181, 185, 191), rgb(107, 125, 155));
+}
+
+#share-buttons img{
+	margin:0;
+  padding-right:5px;
+width: 35px;
+height: 35px;
+display: inline;
 }
 
 li {
@@ -115,5 +156,5 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: rgb(93, 109, 126);
+    background-color: rgb(107, 125, 155);
 }
