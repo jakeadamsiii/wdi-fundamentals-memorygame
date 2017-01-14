@@ -1,11 +1,30 @@
-#jake
-{
+#jake{
     position: absolute; 
     left: 0px;
     height:100%;
     width: 26%;
     margin: 11px;
   text-align: center;
+}
+
+#advert{
+position: absolute; 
+    right: 0px;
+    top:67%;
+    height:80%;
+    width: 26%;
+    margin: 11px;
+}
+
+.rotate{
+	font-size: 4.5em;
+	color:RGB(233, 150, 122);
+	font-family: 'VT323', monospace;
+    height:15%;
+	width: 100%;
+	margin-top:50%;
+	margin-right: 20%;
+	transform: rotate(-35deg);
 }
 
 .behind {
