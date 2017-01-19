@@ -1,13 +1,16 @@
+//Cards and empty array 'cards in play'
 var cards = ["queen","queen","king","king","jack","jack", "ace", "ace", "joker"];
 var cardsInPlay=[];
 
 
 var gameBoard = document.getElementById('game-board');
 
+//timed reload on Joker as to see the card before the page relaods 
 function timedRefresh(timeoutPeriod) {
     setTimeout("location.reload(true);",timeoutPeriod);
 }
 
+//Randomize cards in play 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -29,6 +32,7 @@ function shuffle(array) {
 
 cards = shuffle(cards);
 
+//create game board and cards
 function createBoard(){
   
     for(i=0;i<cards.length;i++){
@@ -41,7 +45,7 @@ function createBoard(){
     }
 }
 
-
+//Detect if two cards match 
 function isMatch(cardsToMatch){
     if(cardsToMatch[0]===cardsToMatch[1]){
     	alert("You found a match!");
@@ -53,7 +57,7 @@ function isMatch(cardsToMatch){
     }
 }
 
-
+//Get card images If Joker = Game over!
 function isTwoCards(){
     var cardType = this.getAttribute('data-card');
     cardsInPlay.push(cardType);
@@ -81,9 +85,9 @@ function isTwoCards(){
 }
 
 
-
 createBoard();
 
+//Score board, modify quantity 
 function modify_qty(val) {
     var qty = document.getElementById('qty').value;
     var new_qty = parseInt(qty,10) + val;
